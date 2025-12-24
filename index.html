@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>SIMRS</title>
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+body{
+  margin:0;
+  height:100vh;
+  background:#f1f5f9;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* Card utama */
+.wrapper{
+  width:90%;
+  max-width:1000px;
+  height:520px;
+  background:white;
+  display:flex;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* FOTO RS */
+.left{
+  flex:1;
+  background:url("assets/img/rs.jpg") center/cover no-repeat;
+}
+
+/* KONTEN */
+.right{
+  flex:1;
+  padding:50px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.right h1{
+  color:#0d6efd;
+  margin-bottom:10px;
+}
+
+.right p{
+  color:#475569;
+  font-size:16px;
+  margin-bottom:30px;
+}
+
+.right a{
+  width:200px;
+  padding:12px;
+  text-align:center;
+  background:#0d6efd;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+.right a:hover{
+  opacity:0.9;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .wrapper{
+    flex-direction:column;
+    height:auto;
+  }
+  .left{
+    height:220px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- FOTO RS -->
+  <div class="left"></div>
+
+  <!-- SISTEM -->
+  <div class="right">
+    <h1>SIMRS</h1>
+    <p>
+      Sistem Informasi Manajemen Rumah Sakit<br>
+      Prototype berbasis Web (HTML & CSS)
+    </p>
+
+    <a href="login.html">Masuk Sistem</a>
+  </div>
+
+</div>
+
+</body>
+</html>
