@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Login SIMRS</title>
+<style>
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#1e293b;
+  font-family:Arial;
+}
+.box{
+  background:white;
+  padding:30px;
+  width:320px;
+  border-radius:8px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+h3{
+  text-align:center;
+  margin-bottom:20px;
+}
+input,select,button{
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+}
+button{
+  background:#0d6efd;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+button:hover{
+  opacity:0.9;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Login SIMRS</h3>
+
+  <input id="user" placeholder="Username">
+  <input id="pass" type="password" placeholder="Password">
+
+  <select id="role">
+    <option value="admin">Admin</option>
+    <option value="dokter">Dokter</option>
+    <option value="farmasi">Farmasi</option>
+  </select>
+
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login(){
+  let u = user.value;
+  let p = pass.value;
+  let r = role.value;
+
+  if (
+    (r === "admin"   && u === "marsela" && p === "marsela123") ||
+    (r === "dokter"  && u === "galdin"  && p === "galdin123")  ||
+    (r === "farmasi" && u === "rosalia" && p === "rosalia123")
+  ) {
+    localStorage.setItem("role", r);
+    location.href = "dashboard.html";
+  } else {
+    alert("Username, password, atau role salah!");
+  }
+}
+</script>
+
+</body>
+</html>
